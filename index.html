@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Flashcard - Học từ vựng tiếng Anh</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🎯 English Flashcard</h1>
+        <p>Học từ vựng tiếng Anh hiệu quả</p>
+      </div>
+
+      <div class="user-panel">
+        <input
+          type="text"
+          class="user-input"
+          id="usernameInput"
+          placeholder="Nhập tên của bạn..."
+          maxlength="20"
+        />
+        <button class="btn btn-primary" onclick="setUsername()">
+          Bắt đầu học
+        </button>
+      </div>
+
+      <div class="stats-container">
+        <div class="stat-card">
+          <div class="stat-number" id="streakCount">0</div>
+          <div class="stat-label">🔥 Streak</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="correctCount">0</div>
+          <div class="stat-label">✅ Đúng</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="totalCount">0</div>
+          <div class="stat-label">📚 Tổng số</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="scoreCount">0</div>
+          <div class="stat-label">⭐ Điểm</div>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="flashcard-section">
+          <div class="flashcard" id="flashcard" onclick="flipCard()">
+            <div class="word" id="word">Click để bắt đầu</div>
+            <div class="pronunciation" id="pronunciation"></div>
+            <div class="meaning" id="meaning">Nhấp vào thẻ để xem nghĩa</div>
+          </div>
+
+          <div class="progress-bar">
+            <div
+              class="progress-fill"
+              id="progressFill"
+              style="width: 0%"
+            ></div>
+          </div>
+
+          <div class="controls">
+            <button class="btn btn-primary" onclick="nextCard()">
+              Thẻ tiếp theo
+            </button>
+            <button class="btn btn-success" onclick="markCorrect()">
+              Biết rồi ✅
+            </button>
+            <button class="btn btn-danger" onclick="markIncorrect()">
+              Chưa biết ❌
+            </button>
+          </div>
+        </div>
+
+        <div class="leaderboard">
+          <h3>🏆 Bảng xếp hạng</h3>
+          <div id="leaderboardList"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
