@@ -205,17 +205,23 @@ function updateProgress() {
 // Dữ liệu fake cho leaderboard (chỉ dùng demo, có thể xóa khi dùng thật)
 if (players.length === 0) {
   players = [
-    { name: "Nguyễn Đức Linh", score: 120, streak: 3, correct: 12, total: 15 },
+    {
+      name: "Nguyễn Đức Linh",
+      score: 1290000,
+      streak: 3,
+      correct: 12,
+      total: 15,
+    },
     {
       name: "Trịnh Trần Phương Tuấn",
-      score: 95,
-      streak: 1,
-      correct: 9,
+      score: 95000,
+      streak: 100,
+      correct: 90,
       total: 14,
     },
-    { name: "Khá Bảnh", score: 80, streak: 0, correct: 8, total: 13 },
-    { name: "David Laid", score: 60, streak: 2, correct: 6, total: 10 },
-    { name: "Hồng Tỷ", score: 45, streak: 0, correct: 4, total: 9 },
+    { name: "Khá Bảnh", score: 10080, streak: 90, correct: 80, total: 13 },
+    { name: "David Laid", score: 60000, streak: 2, correct: 60, total: 10 },
+    { name: "Hồng Tỷ", score: 405000, streak: 0, correct: 40, total: 9 },
   ];
 }
 
